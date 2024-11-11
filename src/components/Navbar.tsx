@@ -8,7 +8,7 @@ import {
 
 const Navbar = () => {
   return (
-    <nav className="fixed w-full z-50 bg-black/20 backdrop-blur-sm">
+    <nav className="absolute w-full z-50">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex items-center justify-between h-20">
           <a href="/" className="text-2xl font-display text-white">Elite Real Estate</a>
@@ -19,7 +19,7 @@ const Navbar = () => {
             <a href="#about" className="text-white hover:text-white/80 transition-colors">About</a>
             <a href="#testimonials" className="text-white hover:text-white/80 transition-colors">Testimonials</a>
             <a href="#contact" className="text-white hover:text-white/80 transition-colors">Contact</a>
-            <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">
+            <Button variant="outline" className="text-black border-white bg-white hover:bg-white/90">
               Get Started
             </Button>
           </div>
@@ -38,7 +38,7 @@ const Navbar = () => {
                   <a href="#about" className="text-lg">About</a>
                   <a href="#testimonials" className="text-lg">Testimonials</a>
                   <a href="#contact" className="text-lg">Contact</a>
-                  <Button className="w-full">Get Started</Button>
+                  <Button className="w-full text-black bg-white hover:bg-white/90">Get Started</Button>
                 </div>
               </SheetContent>
             </Sheet>
