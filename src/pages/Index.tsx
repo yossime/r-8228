@@ -4,10 +4,12 @@ import AboutUs from "@/components/AboutUs";
 import OurVision from "@/components/OurVision";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-white">
+      <Navbar />
       <Hero />
       
       <section className="py-32">
