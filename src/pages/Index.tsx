@@ -3,6 +3,7 @@ import PropertyGrid from "@/components/PropertyGrid";
 import AboutUs from "@/components/AboutUs";
 import OurVision from "@/components/OurVision";
 import Testimonials from "@/components/Testimonials";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
       <AboutUs />
       <OurVision />
       <Testimonials />
+      <Footer />
     </div>
   );
 };
