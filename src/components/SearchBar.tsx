@@ -3,13 +3,13 @@ import { Input } from "./ui/input";
 
 const SearchBar = () => {
   return (
-    <div className="relative w-full max-w-xl">
+    <div className="relative w-full max-w-2xl bg-white/95 rounded-full overflow-hidden">
       <Input
         type="text"
         placeholder="Search properties by location..."
-        className="pl-10 pr-4 py-3 w-full bg-white/90 backdrop-blur-sm border-estate-200"
+        className="pl-12 pr-6 py-6 w-full border-none text-lg"
       />
-      <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-estate-400 w-5 h-5" />
+      <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-estate-400 w-5 h-5" />
     </div>
   );
 };
