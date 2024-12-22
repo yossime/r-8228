@@ -1,4 +1,5 @@
 import SearchBar from "./SearchBar";
+import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
@@ -11,14 +12,21 @@ const Hero = () => {
       >
         <div className="absolute inset-0 bg-black/30" />
       </div>
-      <div className="relative z-10 container mx-auto px-8 text-center">
-        <h1 className="text-6xl md:text-8xl font-display text-white mb-8 leading-tight max-w-3xl mx-auto">
+      <div className="relative z-10 container mx-auto px-4 md:px-8 text-center">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-display text-white mb-4 md:mb-8 leading-tight max-w-3xl mx-auto">
           Premium Pergolas & Winter Closures
         </h1>
-        <p className="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+        <p className="text-lg md:text-xl text-white/90 mb-8 md:mb-12 max-w-2xl mx-auto px-4">
           Transform your outdoor space with custom pergolas and winter balcony closures. Expert craftsmanship, superior materials.
         </p>
-        <div className="max-w-2xl mx-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-2xl mx-auto px-4">
+          <Button 
+            size="lg" 
+            onClick={() => document.getElementById('quote')?.scrollIntoView({ behavior: 'smooth' })}
+            className="w-full sm:w-auto"
+          >
+            Get a Quote
+          </Button>
           <SearchBar />
         </div>
       </div>
