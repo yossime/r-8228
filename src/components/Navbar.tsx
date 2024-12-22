@@ -11,16 +11,16 @@ const Navbar = () => {
     <nav className="absolute w-full z-50">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex items-center justify-between h-20">
-          <a href="/" className="text-2xl font-display text-white">Elite Real Estate</a>
+          <a href="/" className="text-2xl font-display text-white">Elite Pergolas</a>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#properties" className="text-white hover:text-white/80 transition-colors">Properties</a>
-            <a href="#about" className="text-white hover:text-white/80 transition-colors">About</a>
-            <a href="#testimonials" className="text-white hover:text-white/80 transition-colors">Testimonials</a>
+            <a href="#pergolas" className="text-white hover:text-white/80 transition-colors">Pergolas</a>
+            <a href="#winter-closures" className="text-white hover:text-white/80 transition-colors">Winter Closures</a>
+            <a href="#gallery" className="text-white hover:text-white/80 transition-colors">Gallery</a>
             <a href="#contact" className="text-white hover:text-white/80 transition-colors">Contact</a>
             <Button variant="outline" className="text-black border-white bg-white hover:bg-white/90">
-              Get Started
+              Free Consultation
             </Button>
           </div>
 
@@ -34,11 +34,11 @@ const Navbar = () => {
               </SheetTrigger>
               <SheetContent>
                 <div className="flex flex-col space-y-4 mt-8">
-                  <a href="#properties" className="text-lg">Properties</a>
-                  <a href="#about" className="text-lg">About</a>
-                  <a href="#testimonials" className="text-lg">Testimonials</a>
+                  <a href="#pergolas" className="text-lg">Pergolas</a>
+                  <a href="#winter-closures" className="text-lg">Winter Closures</a>
+                  <a href="#gallery" className="text-lg">Gallery</a>
                   <a href="#contact" className="text-lg">Contact</a>
-                  <Button className="w-full text-black bg-white hover:bg-white/90">Get Started</Button>
+                  <Button className="w-full text-black bg-white hover:bg-white/90">Free Consultation</Button>
                 </div>
               </SheetContent>
             </Sheet>
