@@ -1,5 +1,6 @@
 import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 import {
   Sheet,
   SheetContent,
@@ -11,14 +12,14 @@ const Navbar = () => {
     <nav className="absolute w-full z-50">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex items-center justify-between h-20">
-          <a href="/" className="text-2xl font-display text-white">Elite Pergolas</a>
+          <Link to="/" className="text-2xl font-display text-white">Elite Pergolas</Link>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#pergolas" className="text-white hover:text-white/80 transition-colors">Pergolas</a>
-            <a href="#winter-closures" className="text-white hover:text-white/80 transition-colors">Winter Closures</a>
-            <a href="#gallery" className="text-white hover:text-white/80 transition-colors">Gallery</a>
-            <a href="#contact" className="text-white hover:text-white/80 transition-colors">Contact</a>
+            <Link to="/pergolas" className="text-white hover:text-white/80 transition-colors">Pergolas</Link>
+            <Link to="/winter-closures" className="text-white hover:text-white/80 transition-colors">Winter Closures</Link>
+            <Link to="/gallery" className="text-white hover:text-white/80 transition-colors">Gallery</Link>
+            <Link to="/contact" className="text-white hover:text-white/80 transition-colors">Contact</Link>
             <Button variant="outline" className="text-black border-white bg-white hover:bg-white/90">
               Free Consultation
             </Button>
@@ -34,10 +35,10 @@ const Navbar = () => {
               </SheetTrigger>
               <SheetContent>
                 <div className="flex flex-col space-y-4 mt-8">
-                  <a href="#pergolas" className="text-lg">Pergolas</a>
-                  <a href="#winter-closures" className="text-lg">Winter Closures</a>
-                  <a href="#gallery" className="text-lg">Gallery</a>
-                  <a href="#contact" className="text-lg">Contact</a>
+                  <Link to="/pergolas" className="text-lg">Pergolas</Link>
+                  <Link to="/winter-closures" className="text-lg">Winter Closures</Link>
+                  <Link to="/gallery" className="text-lg">Gallery</Link>
+                  <Link to="/contact" className="text-lg">Contact</Link>
                   <Button className="w-full text-black bg-white hover:bg-white/90">Free Consultation</Button>
                 </div>
               </SheetContent>
