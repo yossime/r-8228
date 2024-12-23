@@ -1,13 +1,17 @@
 import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
 } from "./ui/sheet";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
+  const { t } = useTranslation();
+
   return (
     <nav className="absolute w-full z-50">
       <div className="container mx-auto px-4 max-w-6xl">
@@ -16,18 +20,30 @@ const Navbar = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/pergolas" className="text-white hover:text-white/80 transition-colors">Pergolas</Link>
-            <Link to="/winter-closures" className="text-white hover:text-white/80 transition-colors">Winter Closures</Link>
-            <Link to="/gallery" className="text-white hover:text-white/80 transition-colors">Gallery</Link>
-            <Link to="/contact" className="text-white hover:text-white/80 transition-colors">Contact</Link>
-            <Link to="/login" className="text-white hover:text-white/80 transition-colors">Admin</Link>
+            <Link to="/pergolas" className="text-white hover:text-white/80 transition-colors">
+              {t('nav.pergolas')}
+            </Link>
+            <Link to="/winter-closures" className="text-white hover:text-white/80 transition-colors">
+              {t('nav.winterClosures')}
+            </Link>
+            <Link to="/gallery" className="text-white hover:text-white/80 transition-colors">
+              {t('nav.gallery')}
+            </Link>
+            <Link to="/contact" className="text-white hover:text-white/80 transition-colors">
+              {t('nav.contact')}
+            </Link>
+            <Link to="/login" className="text-white hover:text-white/80 transition-colors">
+              {t('nav.admin')}
+            </Link>
+            <LanguageSwitcher />
             <Button variant="outline" className="text-black border-white bg-white hover:bg-white/90">
-              Free Consultation
+              {t('nav.consultation')}
             </Button>
           </div>
 
           {/* Mobile Navigation */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-4">
+            <LanguageSwitcher />
             <Sheet>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" className="text-white">
@@ -36,12 +52,14 @@ const Navbar = () => {
               </SheetTrigger>
               <SheetContent>
                 <div className="flex flex-col space-y-4 mt-8">
-                  <Link to="/pergolas" className="text-lg">Pergolas</Link>
-                  <Link to="/winter-closures" className="text-lg">Winter Closures</Link>
-                  <Link to="/gallery" className="text-lg">Gallery</Link>
-                  <Link to="/contact" className="text-lg">Contact</Link>
-                  <Link to="/login" className="text-lg">Admin</Link>
-                  <Button className="w-full text-black bg-white hover:bg-white/90">Free Consultation</Button>
+                  <Link to="/pergolas" className="text-lg">{t('nav.pergolas')}</Link>
+                  <Link to="/winter-closures" className="text-lg">{t('nav.winterClosures')}</Link>
+                  <Link to="/gallery" className="text-lg">{t('nav.gallery')}</Link>
+                  <Link to="/contact" className="text-lg">{t('nav.contact')}</Link>
+                  <Link to="/login" className="text-lg">{t('nav.admin')}</Link>
+                  <Button className="w-full text-black bg-white hover:bg-white/90">
+                    {t('nav.consultation')}
+                  </Button>
                 </div>
               </SheetContent>
             </Sheet>

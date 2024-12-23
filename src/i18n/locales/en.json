@@ -1,0 +1,42 @@
+{
+  "hero": {
+    "title": "Premium Pergolas & Winter Closures",
+    "subtitle": "Transform your outdoor space with custom pergolas and winter balcony closures. Expert craftsmanship, superior materials."
+  },
+  "nav": {
+    "pergolas": "Pergolas",
+    "winterClosures": "Winter Closures",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "admin": "Admin",
+    "consultation": "Free Consultation"
+  },
+  "about": {
+    "title": "About us",
+    "description": "As Elite Real Estate, we provide elevated property solutions, expert guidance, and exceptional service to discerning clientele."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "subtitle": "Our mission is to create innovative, sustainable communities that set new standards.",
+    "values": {
+      "elevatedLiving": {
+        "title": "Elevated Living Spaces",
+        "description": "Creating exceptional living environments that blend luxury with functionality."
+      },
+      "sustainable": {
+        "title": "Sustainable Communities",
+        "description": "Building eco-conscious developments that respect and enhance their surroundings."
+      },
+      "expert": {
+        "title": "Expert Guidance",
+        "description": "Providing professional expertise and personalized service at every step."
+      }
+    }
+  },
+  "footer": {
+    "services": "Our Services",
+    "contact": "Contact Info",
+    "follow": "Follow Us",
+    "rights": "All rights reserved."
+  }
+}
