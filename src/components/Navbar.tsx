@@ -32,9 +32,9 @@ const Navbar = () => {
             <Link to="/contact" className="text-white hover:text-white/80 transition-colors">
               {t('nav.contact')}
             </Link>
-            <Link to="/login" className="text-white hover:text-white/80 transition-colors">
+            {/* <Link to="/login" className="text-white hover:text-white/80 transition-colors">
               {t('nav.admin')}
-            </Link>
+            </Link> */}
             <LanguageSwitcher />
             <Button variant="outline" className="text-black border-white bg-white hover:bg-white/90">
               {t('nav.consultation')}
