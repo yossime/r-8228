@@ -71,7 +71,7 @@
     }
   },
  "footer": {
-  "companyName": "Elite Pergolas",
+  "companyName": "בנימין",
   "description": "Custom pergolas and winter balcony closures crafted with excellence.",
   "services": "Our Services",
   "serviceLinks": {
@@ -83,8 +83,8 @@
   "contact": "Contact Info",
   "address": "123 Construction Avenue",
   "city": "Your City, State 12345",
-  "phone": "+1 (555) 123-4567",
-  "email": "info@elitepergolas.com",
+"phone": "053-3726540",
+"email": "b0533139978@gmail.com",
   "followUs": "Follow Us",
   "rights": "All rights reserved."
 },
@@ -102,11 +102,11 @@
   "details": {
     "phone": {
       "label": "Phone",
-      "value": "+1 (555) 123-4567"
+      "value": "053-3726540"
     },
     "email": {
       "label": "Email",
-      "value": "info@elitepergolas.com"
+      "value": "b0533139978@gmail.com"
     },
     "address": {
       "label": "Address",

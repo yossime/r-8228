@@ -17,13 +17,13 @@ const testimonials = t("testimonials.items", { returnObjects: true }) as Array<{
 }>;
 
   return (
-    <section className="py-20 bg-estate-50">
+    <section className="py-20 bg-estate-50 overflow-x-hidden">
       <div className="container mx-auto px-4 max-w-6xl text-center">
         <h2 className="text-4xl font-display text-estate-800 mb-4">
           {t("testimonials.title")}
         </h2>
         <Carousel className="max-w-4xl mx-auto">
-          <CarouselContent>
+          <CarouselContent className="flex overflow-x-hidden">
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index}>
                 <div className="p-6">

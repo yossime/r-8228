@@ -57,17 +57,7 @@ const Contact = () => {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-start">
-                  <MapPin className="w-5 h-5 mr-4 mt-1 text-estate-600" />
-                  <div>
-                    <h3 className="font-medium text-estate-800">
-                      {t("contact.details.address.label")}
-                    </h3>
-                    <p className="text-estate-600">
-                      {t("contact.details.address.value")}
-                    </p>
-                  </div>
-                </div>
+
               </div>
             </div>
 

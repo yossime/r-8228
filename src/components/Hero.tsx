@@ -35,7 +35,6 @@ const Hero = () => {
           >
             {t("nav.consultation")}
           </Button>
-          {/* <SearchBar /> */}
         </div>
       </div>
     </div>

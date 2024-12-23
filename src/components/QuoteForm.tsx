@@ -60,7 +60,10 @@ const QuoteForm = () => {
   };
 
   return (
-    <section className="py-20 bg-estate-100" id="quote">
+    <section
+      className={`py-20 bg-estate-100 `}
+      id="quote"
+    >
       <div className="container mx-auto px-4 max-w-2xl">
         <h2 className="text-4xl md:text-5xl font-display text-estate-800 mb-6 text-center">
           {t("quote.title")}
@@ -70,7 +73,7 @@ const QuoteForm = () => {
         </p>
         <form
           onSubmit={handleSubmit}
-          className="space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm"
+          className={`space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm `}
         >
           <div>
             <label
@@ -80,6 +83,7 @@ const QuoteForm = () => {
               {t("quote.form.name")}
             </label>
             <Input
+              className={`w-full rounded-md `}
               id="name"
               value={formData.name}
               onChange={(e) =>
@@ -97,6 +101,7 @@ const QuoteForm = () => {
               {t("quote.form.email")}
             </label>
             <Input
+              className={`w-full rounded-md `}
               id="email"
               type="email"
               value={formData.email}
@@ -115,6 +120,7 @@ const QuoteForm = () => {
               {t("quote.form.phone")}
             </label>
             <Input
+              className={`w-full rounded-md `}
               id="phone"
               type="text"
               value={formData.phone}
@@ -138,7 +144,7 @@ const QuoteForm = () => {
               onChange={(e) =>
                 setFormData({ ...formData, projectType: e.target.value })
               }
-              className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background"
+              className={`w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background `}
               required
             >
               <option value="pergola">{t("quote.form.options.pergola")}</option>
@@ -163,7 +169,7 @@ const QuoteForm = () => {
               }
               required
               placeholder={t("quote.form.message")}
-              className="min-h-[120px]"
+              className={`w-full rounded-md min-h-[120px]"`}
             />
           </div>
           <Button type="submit" disabled={isSubmitting} className="w-full">

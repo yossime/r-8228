@@ -6,8 +6,8 @@ import en from "./locales/en.json";
 import he from "./locales/he.json";
 
 i18n
-  .use(LanguageDetector) 
-  .use(initReactI18next) 
+  .use(LanguageDetector)
+  .use(initReactI18next)
   .init({
     resources: {
       en: { translation: en },
@@ -16,11 +16,15 @@ i18n
     fallbackLng: "he",
     detection: {
       order: ["querystring", "cookie", "localStorage", "navigator"],
-      caches: ["cookie", "localStorage"], 
+      caches: ["cookie", "localStorage"],
     },
     interpolation: {
-      escapeValue: false, 
+      escapeValue: false,
     },
+  })
+  .then(() => {
+    const currentLang = i18n.language || i18n.options.fallbackLng;
+    document.documentElement.dir = currentLang === "he" ? "rtl" : "ltr";
   });
 
 export default i18n;
