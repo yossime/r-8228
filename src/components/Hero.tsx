@@ -10,7 +10,8 @@ const Hero = () => {
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1591825729269-caeb344f6df2')",
+          backgroundImage:
+            "url('https://dniygebqzdscndbqwvpb.supabase.co/storage/v1/object/sign/Marketing/1802513B-14x10-Pergola-B-HERO_1000x1000.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJNYXJrZXRpbmcvMTgwMjUxM0ItMTR4MTAtUGVyZ29sYS1CLUhFUk9fMTAwMHgxMDAwLndlYnAiLCJpYXQiOjE3MzQ5NTI4MjQsImV4cCI6MTc2NjQ4ODgyNH0.zl5Iyb8pinbGjj0xB0ZqeraJSF-8ZKYx7s-eOaoihu8&t=2024-12-23T11%3A20%3A24.566Z')",
         }}
       >
         <div className="absolute inset-0 bg-black/30" />
@@ -23,14 +24,18 @@ const Hero = () => {
           {t("hero.subtitle")}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-2xl mx-auto px-4">
-          <Button 
-            size="lg" 
-            onClick={() => document.getElementById('quote')?.scrollIntoView({ behavior: 'smooth' })}
+          <Button
+            size="lg"
+            onClick={() =>
+              document
+                .getElementById("quote")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
             className="w-full sm:w-auto"
           >
             {t("nav.consultation")}
           </Button>
-          <SearchBar />
+          {/* <SearchBar /> */}
         </div>
       </div>
     </div>

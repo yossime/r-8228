@@ -1,24 +1,25 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
 
-import enTranslations from './locales/en.json';
-import heTranslations from './locales/he.json';
+import en from "./locales/en.json";
+import he from "./locales/he.json";
 
 i18n
-  .use(initReactI18next)
+  .use(LanguageDetector) 
+  .use(initReactI18next) 
   .init({
     resources: {
-      en: {
-        translation: enTranslations,
-      },
-      he: {
-        translation: heTranslations,
-      },
+      en: { translation: en },
+      he: { translation: he },
     },
-    lng: 'en',
-    fallbackLng: 'en',
+    fallbackLng: "he",
+    detection: {
+      order: ["querystring", "cookie", "localStorage", "navigator"],
+      caches: ["cookie", "localStorage"], 
+    },
     interpolation: {
-      escapeValue: false,
+      escapeValue: false, 
     },
   });
 

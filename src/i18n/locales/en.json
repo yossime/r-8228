@@ -3,6 +3,9 @@
     "title": "Premium Pergolas & Winter Closures",
     "subtitle": "Transform your outdoor space with custom pergolas and winter balcony closures. Expert craftsmanship, superior materials."
   },
+  "index":{
+    "projects":"Our Projects"
+  },
   "nav": {
     "pergolas": "Pergolas",
     "winterClosures": "Winter Closures",
@@ -11,9 +14,43 @@
     "admin": "Admin",
     "consultation": "Free Consultation"
   },
-  "about": {
-    "title": "About us",
-    "description": "As Elite Real Estate, we provide elevated property solutions, expert guidance, and exceptional service to discerning clientele."
+"about": {
+  "title": "About Us",
+  "description": "We specialize in designing and constructing custom pergolas and high-quality winter enclosures that combine innovative design with optimal functionality. With years of experience and uncompromising professionalism, we offer our clients solutions that enhance their outdoor spaces, making them usable and enjoyable throughout the year."
+},
+  "quote": {
+    "title": "Get a Free Quote",
+    "subtitle": "Fill out the form below and we'll get back to you with a customized quote.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "projectType": "Project Type",
+      "message": "Project Details",
+      "submit": "Submit Request",
+      "success": "Your request has been submitted successfully!",
+      "error": "There was an error submitting your request. Please try again.",
+      "options": {
+            "pergola": "Pergola Installation",
+            "winter-closure": "Winter Balcony Closure",
+            "both": "Both Services"
+          }
+    }
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "items": [
+      {
+        "name": "Sarah Johnson",
+        "role": "Homeowner",
+        "text": "Elite Pergolas exceeded all our expectations, delivering exceptional service and phenomenal results. Their expertise and attention to detail made our home buying experience truly remarkable."
+      },
+      {
+        "name": "Michael Chen",
+        "role": "Property Investor",
+        "text": "Working with Elite Pergolas has been transformative for our investment portfolio. Their market insights and professional guidance have been invaluable."
+      }
+    ]
   },
   "vision": {
     "title": "Our Vision",
@@ -33,10 +70,48 @@
       }
     }
   },
-  "footer": {
-    "services": "Our Services",
-    "contact": "Contact Info",
-    "follow": "Follow Us",
-    "rights": "All rights reserved."
+ "footer": {
+  "companyName": "Elite Pergolas",
+  "description": "Custom pergolas and winter balcony closures crafted with excellence.",
+  "services": "Our Services",
+  "serviceLinks": {
+    "pergolas": "Custom Pergolas",
+    "winterClosures": "Winter Closures",
+    "gallery": "Project Gallery",
+    "consultation": "Free Consultation"
+  },
+  "contact": "Contact Info",
+  "address": "123 Construction Avenue",
+  "city": "Your City, State 12345",
+  "phone": "+1 (555) 123-4567",
+  "email": "info@elitepergolas.com",
+  "followUs": "Follow Us",
+  "rights": "All rights reserved."
+},
+"contact": {
+  "title": "Contact Us",
+  "subtitle": "Please fill out the details and we'll get back to you as soon as possible.",
+  "form": {
+    "name": "Full Name",
+    "email": "Email Address",
+    "message": "Message",
+    "submit": "Send Message",
+    "success": "Message sent successfully!",
+    "error": "An error occurred. Please try again."
+  },
+  "details": {
+    "phone": {
+      "label": "Phone",
+      "value": "+1 (555) 123-4567"
+    },
+    "email": {
+      "label": "Email",
+      "value": "info@elitepergolas.com"
+    },
+    "address": {
+      "label": "Address",
+      "value": "123 Construction Avenue, Your City, State 12345"
+    }
   }
+}
 }

@@ -1,4 +1,3 @@
-import { MapPin } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 
 interface PropertyCardProps {
@@ -19,13 +18,9 @@ const PropertyCard = ({ image, title, location }: PropertyCardProps) => {
             className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
           />
         </div>
-        <div className="pt-4">
+        {/* <div className="pt-4">
           <h3 className="text-lg font-medium text-estate-800">{title}</h3>
-          <div className="flex items-center mt-2 text-estate-500">
-            <MapPin className="w-4 h-4 mr-1" />
-            <span className="text-sm">{location}</span>
-          </div>
-        </div>
+        </div> */}
       </CardContent>
     </Card>
   );

@@ -4,8 +4,10 @@ import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { useToast } from "./ui/use-toast";
 import { supabase } from "@/integrations/supabase/client";
+import { useTranslation } from "react-i18next";
 
 const QuoteForm = () => {
+  const { t } = useTranslation();
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -16,7 +18,7 @@ const QuoteForm = () => {
     message: "",
   });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -34,8 +36,8 @@ const QuoteForm = () => {
       if (error) throw error;
 
       toast({
-        title: "Quote Request Received",
-        description: "We'll get back to you with a quote soon!",
+        title: t("quote.form.success"),
+        description: t("quote.subtitle"),
       });
 
       setFormData({
@@ -45,10 +47,10 @@ const QuoteForm = () => {
         projectType: "pergola",
         message: "",
       });
-    } catch (error: any) {
+    } catch (error) {
       toast({
-        title: "Error",
-        description: "There was a problem submitting your quote request. Please try again.",
+        title: t("quote.form.error"),
+        description: t("quote.subtitle"),
         variant: "destructive",
       });
       console.error("Error submitting quote:", error);
@@ -61,81 +63,111 @@ const QuoteForm = () => {
     <section className="py-20 bg-estate-100" id="quote">
       <div className="container mx-auto px-4 max-w-2xl">
         <h2 className="text-4xl md:text-5xl font-display text-estate-800 mb-6 text-center">
-          Get a Free Quote
+          {t("quote.title")}
         </h2>
         <p className="text-estate-500 mb-8 text-center">
-          Fill out the form below and we'll get back to you with a customized quote.
+          {t("quote.subtitle")}
         </p>
-        <form onSubmit={handleSubmit} className="space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm">
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-6 bg-white p-6 md:p-8 rounded-lg shadow-sm"
+        >
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-estate-700 mb-2">
-              Name
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-estate-700 mb-2"
+            >
+              {t("quote.form.name")}
             </label>
             <Input
               id="name"
               value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
               required
-              placeholder="Your name"
+              placeholder={t("quote.form.name")}
             />
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-estate-700 mb-2">
-              Email
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-estate-700 mb-2"
+            >
+              {t("quote.form.email")}
             </label>
             <Input
               id="email"
               type="email"
               value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
               required
-              placeholder="your@email.com"
+              placeholder={t("quote.form.email")}
             />
           </div>
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-estate-700 mb-2">
-              Phone Number
+            <label
+              htmlFor="phone"
+              className="block text-sm font-medium text-estate-700 mb-2"
+            >
+              {t("quote.form.phone")}
             </label>
             <Input
               id="phone"
-              type="tel"
+              type="text"
               value={formData.phone}
-              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, phone: e.target.value })
+              }
               required
-              placeholder="Your phone number"
+              placeholder={t("quote.form.phone")}
             />
           </div>
           <div>
-            <label htmlFor="projectType" className="block text-sm font-medium text-estate-700 mb-2">
-              Project Type
+            <label
+              htmlFor="projectType"
+              className="block text-sm font-medium text-estate-700 mb-2"
+            >
+              {t("quote.form.projectType")}
             </label>
             <select
               id="projectType"
               value={formData.projectType}
-              onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, projectType: e.target.value })
+              }
               className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background"
               required
             >
-              <option value="pergola">Pergola Installation</option>
-              <option value="winter-closure">Winter Balcony Closure</option>
-              <option value="both">Both Services</option>
+              <option value="pergola">{t("quote.form.options.pergola")}</option>
+              <option value="winter-closure">
+                {t("quote.form.options.winter-closure")}
+              </option>
+              <option value="both">{t("quote.form.options.both")}</option>
             </select>
           </div>
           <div>
-            <label htmlFor="message" className="block text-sm font-medium text-estate-700 mb-2">
-              Project Details
+            <label
+              htmlFor="message"
+              className="block text-sm font-medium text-estate-700 mb-2"
+            >
+              {t("quote.form.message")}
             </label>
             <Textarea
               id="message"
               value={formData.message}
-              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
               required
-              placeholder="Please describe your project (size, location, specific requirements, etc.)"
+              placeholder={t("quote.form.message")}
               className="min-h-[120px]"
             />
           </div>
           <Button type="submit" disabled={isSubmitting} className="w-full">
-            {isSubmitting ? "Submitting..." : "Request Quote"}
+            {isSubmitting ? t("quote.form.submitting") : t("quote.form.submit")}
           </Button>
         </form>
       </div>

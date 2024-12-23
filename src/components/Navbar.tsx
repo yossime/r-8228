@@ -16,32 +16,48 @@ const Navbar = () => {
     <nav className="absolute w-full z-50">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="text-2xl font-display text-white">Elite Pergolas</Link>
-          
-          {/* Desktop Navigation */}
+          <Link to="/" className="text-2xl font-display text-white">
+            Elite Pergolas
+          </Link>
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/pergolas" className="text-white hover:text-white/80 transition-colors">
-              {t('nav.pergolas')}
+            <Link
+              to="/pergolas"
+              className="text-white hover:text-white/80 transition-colors"
+            >
+              {t("nav.pergolas")}
             </Link>
-            <Link to="/winter-closures" className="text-white hover:text-white/80 transition-colors">
-              {t('nav.winterClosures')}
+            <Link
+              to="/winter-closures"
+              className="text-white hover:text-white/80 transition-colors"
+            >
+              {t("nav.winterClosures")}
             </Link>
-            <Link to="/gallery" className="text-white hover:text-white/80 transition-colors">
-              {t('nav.gallery')}
+            <Link
+              to="/gallery"
+              className="text-white hover:text-white/80 transition-colors"
+            >
+              {t("nav.gallery")}
             </Link>
-            <Link to="/contact" className="text-white hover:text-white/80 transition-colors">
-              {t('nav.contact')}
+            <Link
+              to="/contact"
+              className="text-white hover:text-white/80 transition-colors"
+            >
+              {t("nav.contact")}
             </Link>
-            {/* <Link to="/login" className="text-white hover:text-white/80 transition-colors">
-              {t('nav.admin')}
-            </Link> */}
             <LanguageSwitcher />
-            <Button variant="outline" className="text-black border-white bg-white hover:bg-white/90">
-              {t('nav.consultation')}
+            <Button
+              variant="outline"
+              className="text-black border-white bg-white hover:bg-white/90"
+              onClick={() =>
+                document
+                  .getElementById("quote")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              {t("nav.consultation")}
             </Button>
           </div>
 
-          {/* Mobile Navigation */}
           <div className="md:hidden flex items-center space-x-4">
             <LanguageSwitcher />
             <Sheet>
@@ -52,13 +68,30 @@ const Navbar = () => {
               </SheetTrigger>
               <SheetContent>
                 <div className="flex flex-col space-y-4 mt-8">
-                  <Link to="/pergolas" className="text-lg">{t('nav.pergolas')}</Link>
-                  <Link to="/winter-closures" className="text-lg">{t('nav.winterClosures')}</Link>
-                  <Link to="/gallery" className="text-lg">{t('nav.gallery')}</Link>
-                  <Link to="/contact" className="text-lg">{t('nav.contact')}</Link>
-                  <Link to="/login" className="text-lg">{t('nav.admin')}</Link>
-                  <Button className="w-full text-black bg-white hover:bg-white/90">
-                    {t('nav.consultation')}
+                  <Link to="/pergolas" className="text-lg">
+                    {t("nav.pergolas")}
+                  </Link>
+                  <Link to="/winter-closures" className="text-lg">
+                    {t("nav.winterClosures")}
+                  </Link>
+                  <Link to="/gallery" className="text-lg">
+                    {t("nav.gallery")}
+                  </Link>
+                  <Link to="/contact" className="text-lg">
+                    {t("nav.contact")}
+                  </Link>
+                  <Link to="/login" className="text-lg">
+                    {t("nav.admin")}
+                  </Link>
+                  <Button
+                    onClick={() =>
+                      document
+                        .getElementById("quote")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                    }
+                    className="w-full text-black bg-white hover:bg-white/90"
+                  >
+                    {t("nav.consultation")}
                   </Button>
                 </div>
               </SheetContent>
