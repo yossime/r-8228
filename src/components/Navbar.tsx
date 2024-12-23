@@ -20,6 +20,7 @@ const Navbar = () => {
             <Link to="/winter-closures" className="text-white hover:text-white/80 transition-colors">Winter Closures</Link>
             <Link to="/gallery" className="text-white hover:text-white/80 transition-colors">Gallery</Link>
             <Link to="/contact" className="text-white hover:text-white/80 transition-colors">Contact</Link>
+            <Link to="/login" className="text-white hover:text-white/80 transition-colors">Admin</Link>
             <Button variant="outline" className="text-black border-white bg-white hover:bg-white/90">
               Free Consultation
             </Button>
@@ -39,6 +40,7 @@ const Navbar = () => {
                   <Link to="/winter-closures" className="text-lg">Winter Closures</Link>
                   <Link to="/gallery" className="text-lg">Gallery</Link>
                   <Link to="/contact" className="text-lg">Contact</Link>
+                  <Link to="/login" className="text-lg">Admin</Link>
                   <Button className="w-full text-black bg-white hover:bg-white/90">Free Consultation</Button>
                 </div>
               </SheetContent>
