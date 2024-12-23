@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import SearchBar from "./SearchBar";
 import { Button } from "./ui/button";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="relative h-screen min-h-[600px] flex items-center justify-center">
       <div
@@ -14,10 +17,10 @@ const Hero = () => {
       </div>
       <div className="relative z-10 container mx-auto px-4 md:px-8 text-center">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-display text-white mb-4 md:mb-8 leading-tight max-w-3xl mx-auto">
-          Premium Pergolas & Winter Closures
+          {t("hero.title")}
         </h1>
         <p className="text-lg md:text-xl text-white/90 mb-8 md:mb-12 max-w-2xl mx-auto px-4">
-          Transform your outdoor space with custom pergolas and winter balcony closures. Expert craftsmanship, superior materials.
+          {t("hero.subtitle")}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-2xl mx-auto px-4">
           <Button 
@@ -25,7 +28,7 @@ const Hero = () => {
             onClick={() => document.getElementById('quote')?.scrollIntoView({ behavior: 'smooth' })}
             className="w-full sm:w-auto"
           >
-            Get a Quote
+            {t("nav.consultation")}
           </Button>
           <SearchBar />
         </div>
