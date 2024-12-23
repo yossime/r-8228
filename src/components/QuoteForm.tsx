@@ -3,9 +3,11 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { useToast } from "./ui/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const QuoteForm = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,21 +16,45 @@ const QuoteForm = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send this data to your backend
-    // For now, we'll just show a success message
-    toast({
-      title: "Quote Request Received",
-      description: "We'll get back to you with a quote soon!",
-    });
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      projectType: "pergola",
-      message: "",
-    });
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase.from("quotes").insert([
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          project_type: formData.projectType,
+          message: formData.message,
+        },
+      ]);
+
+      if (error) throw error;
+
+      toast({
+        title: "Quote Request Received",
+        description: "We'll get back to you with a quote soon!",
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        projectType: "pergola",
+        message: "",
+      });
+    } catch (error: any) {
+      toast({
+        title: "Error",
+        description: "There was a problem submitting your quote request. Please try again.",
+        variant: "destructive",
+      });
+      console.error("Error submitting quote:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -108,8 +134,8 @@ const QuoteForm = () => {
               className="min-h-[120px]"
             />
           </div>
-          <Button type="submit" className="w-full">
-            Request Quote
+          <Button type="submit" disabled={isSubmitting} className="w-full">
+            {isSubmitting ? "Submitting..." : "Request Quote"}
           </Button>
         </form>
       </div>
