@@ -65,8 +65,9 @@ export default {
         }
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        display: ["Playfair Display", "serif"],
+        sans: ["Inter", "Heebo", "sans-serif"],
+        display: ["Playfair Display", "Heebo", "serif"],
+        hebrew: ["Heebo", "sans-serif"]
       },
       borderRadius: {
         lg: "var(--radius)",

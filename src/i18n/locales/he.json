@@ -73,5 +73,35 @@
     "contact": "פרטי התקשרות",
     "follow": "עקבו אחרינו",
     "rights": "כל הזכויות שמורות."
+  },
+  "gallery": {
+    "title": "הגלריה שלנו",
+    "subtitle": "צפו בפרויקטים האחרונים שלנו",
+    "categories": {
+      "all": "הכל",
+      "pergolas": "פרגולות",
+      "winterClosures": "סגירות חורף"
+    }
+  },
+  "login": {
+    "title": "כניסה למערכת",
+    "email": "דואר אלקטרוני",
+    "password": "סיסמה",
+    "submit": "התחבר",
+    "error": "שגיאה בהתחברות",
+    "success": "התחברת בהצלחה"
+  },
+  "admin": {
+    "title": "ניהול מערכת",
+    "quotes": "הצעות מחיר",
+    "status": {
+      "pending": "ממתין",
+      "inProgress": "בטיפול",
+      "completed": "הושלם",
+      "rejected": "נדחה"
+    }
+  },
+  "search": {
+    "placeholder": "חפש בשירותים שלנו..."
   }
 }
